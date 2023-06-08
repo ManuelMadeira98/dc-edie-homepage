@@ -1,0 +1,8 @@
+<article class="card" [tabindex]="service.tabIndex">
+	<div class="card__icon card__icon--blue">
+		<span class="material-symbols-outlined">{{ service.iconName }}</span>
+	</div>
+	<p class="card__title">{{ service.title }}</p>
+	<p class="card__description">{{ service.description }}</p>
+	<button class="card__button" [tabindex]="service.tabIndex + 1">Get started</button>
+</article>

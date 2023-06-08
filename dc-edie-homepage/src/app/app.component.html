@@ -1,0 +1,68 @@
+<header class="header">
+	<span class="header__title">Edie</span>
+	<!-- <app-navigation></app-navigation> -->
+</header>
+
+<main class="home">
+	<section class="home__intro">
+		<div class="offset">
+			<p class="p p--small p--blue">Unhappy with your website?</p>
+			<p class="p p--large">We create beautiful and fast web services</p>
+		</div>
+
+		<img class="home__img" src="assets/heroImage.jpg" alt="Developers in a meeting">
+
+		<div class="offset">
+			<p class="p--large">Story, emotion and purpose</p>
+			<p class="home__mission">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+
+			<div class="home__contact">
+				<label for="input-email">Want us to contact you?</label>
+
+				<div class="home__contact__field" tabindex="-1">
+					<input required id="input-email" type="email" placeholder="Email" autocomplete="off" tabindex="1">
+					<button class="home__contact__field__join" tabindex="2">Join</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--------------------------------------------------------------- SERVICES -------------------------------------------------------------->
+	<section class="home__services">
+		<p class="p p--large services__title">We offer high demand services</p>
+
+		<div class="services__cards">
+			<ng-container *ngFor="let service of services">
+				<app-card-service [service]="service"></app-card-service>
+			</ng-container>
+		</div>
+	</section>
+
+	<!--------------------------------------------------------------- DESIGNS --------------------------------------------------------------->
+	<section class="home__designs">
+		<p class="p p--large designs__title">Good design means good business</p>
+
+		<div class="designs__cards">
+			<ng-container *ngFor="let design of designs">
+				<app-card-design [design]="design"></app-card-design>
+			</ng-container>
+		</div>
+
+		<a class="p p--normal p--blue designs__more" href="" arrow="→" tabIndex="7">see more</a>
+	</section>
+
+	<!--------------------------------------------------------------- TEAM ------------------------------------------------------------------>
+	<section class="home__team">
+		<p class="p p--normal p--red">Meet the team</p>
+		<p class="p p--xlarge teams__title">We are chilled and a laidback team</p>
+		<p class="teams__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+		<div class="team">
+
+		</div>
+	</section>
+</main>
+
+<footer>
+		
+</footer>

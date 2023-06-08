@@ -1,0 +1,26 @@
+:host {
+	margin-top: 2.25rem;
+	display: block;
+}
+
+.card {
+	&__image {
+		width: 100%;
+		max-width: 545px;
+		height: auto;
+		border-radius: .75rem;
+		margin-bottom: .75rem;
+	}
+
+	&__theme {
+		font-size: .75rem;
+		font-weight: var(--font-light);
+		color: var(--clr-neutral-500);
+	}
+
+	&__project {
+		font-size: 1.125rem;
+		font-weight: var(--font-medium);
+		color: var(--clr-neutral-700);
+	}
+}
