@@ -1,0 +1,60 @@
+:host {
+	display: block;
+}
+
+:host-context(.intro) {
+	margin-top: 1.9375rem;
+}
+
+:host-context(.footer) {
+	margin-top: 4rem;
+}
+
+.contact {
+	position: relative;
+
+	&__label {
+		font-size: .625rem;
+		color: var(--clr-neutral-500);
+	}
+
+	&__field {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		background-color: var(--clr-neutral-200);
+		padding: .25rem;
+		border-radius: .75rem;
+		margin-top: .25rem;
+		font-size: .875rem;
+		height: 3rem;
+
+		&:focus-within {
+			outline: -webkit-focus-ring-color auto 1px;
+		}
+
+		input {
+			width: 100%;
+			padding: 0;
+			border: none;
+			outline: none;
+			background-color: var(--clr-neutral-200);
+			margin-left: 1.1875rem;
+			margin-right: 5rem;
+		}
+	}
+
+	&__join {
+		position: absolute;
+		border: none;
+		height: 2.5rem;
+		bottom: 0.25rem;
+		right: .3125rem;
+		font-size: .875rem;
+		font-weight: var(--font-medium);
+		background-color: var(--clr-primary-400);
+		color: var(--clr-neutral-200);
+		border-radius: .75rem;
+		width: 4.4375rem;
+	}
+}

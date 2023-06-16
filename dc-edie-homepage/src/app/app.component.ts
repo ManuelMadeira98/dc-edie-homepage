@@ -9,9 +9,9 @@ import { IDesign, IService } from './types';
 export class AppComponent {
 	readonly loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.";
 	readonly services: IService[] = [
-		{ iconName: 'edit', title: 'UI/UX Design', description: this.loremIpsum, tabIndex: 3 },
-		{ iconName: 'code', title: 'Front End', description: this.loremIpsum, tabIndex: 4 },
-		{ iconName: 'storage', title: 'Mobile application', description: this.loremIpsum, tabIndex: 5 }, 
+		{ iconName: 'edit', title: 'UI/UX Design', description: this.loremIpsum, tabIndex: 8 },
+		{ iconName: 'code', title: 'Front End', description: this.loremIpsum, tabIndex: 10 },
+		{ iconName: 'storage', title: 'Back End', description: this.loremIpsum, tabIndex: 12 }, 
 	]
 	readonly designs: IDesign[] = [
 		{ imageUrl: 'assets/smarthome.jpg', theme: 'Full stack application', project: 'Smart home dashboard' },

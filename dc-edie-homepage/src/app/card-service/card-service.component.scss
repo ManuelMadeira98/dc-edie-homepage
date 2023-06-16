@@ -7,13 +7,13 @@
 
 	&:nth-child(2) {
 		.card__icon {
-			background-color: var(--clr-secondary-400);
+			background-color: var(--clr-secondary-300);
 		}
 	}
 
 	&:nth-child(3) {
 		.card__icon {
-			background-color: var(--clr-secondary-300);
+			background-color: var(--clr-secondary-400);
 		}
 	}
 }
@@ -21,9 +21,10 @@
 .card {
 	display: grid;
 	grid-gap: 1.875rem;
-	padding: 3.0625rem 2.125rem;
+	padding: 3.0625rem 7.5%;
 	border: none;
 	border-radius: 1.5rem;
+	transition: all 0.2s ease-in-out;
 
 	&:hover {
 		cursor: pointer;
@@ -71,5 +72,6 @@
 		padding: .5625rem .75rem;
 		background-color: var(--clr-neutral-300);
 		color: var(--clr-neutral-500);
+		transition: all 0.2s ease-in-out;
 	}
 }

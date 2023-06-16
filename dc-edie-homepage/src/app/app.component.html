@@ -1,72 +1,94 @@
-<header class="header">
-	<span class="header__title">Edie</span>
-	<!-- <app-navigation></app-navigation> -->
-</header>
-
-<main class="home">
-	<section class="intro">
-		<div class="offset">
-			<p class="p p--small p--blue">Unhappy with your website?</p>
-			<p class="p p--large">We create beautiful and fast web services</p>
-		</div>
-
-		<img class="intro__img" src="assets/heroImage.jpg" alt="Developers in a meeting">
-
-		<div class="offset">
-			<p class="p--large">Story, emotion and purpose</p>
-			<p class="intro__mission">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
-
-			<div class="intro__contact">
-				<label for="input-email">Want us to contact you?</label>
-
-				<div class="intro__contact__field" tabindex="-1">
-					<input required id="input-email" type="email" placeholder="Email" autocomplete="off" tabindex="1">
-					<button class="intro__contact__field__join" tabindex="2">Join</button>
+	<header class="header">
+		<span class="header__title">Edie</span>
+		<app-navigation></app-navigation>
+	</header>
+	
+	<main class="home">
+		<section id="home" class="intro">
+			<div class="margin-offset">
+				<p class="p--small p--blue">Unhappy with your website?</p>
+				<p class="p--large">We create beautiful and fast web services</p>
+			</div>
+	
+			<img class="intro__img" src="assets/heroImage.jpg" alt="Developers in a meeting">
+	
+			<div class="margin-offset">
+				<p class="p--large">Story, emotion and purpose</p>
+				<p class="intro__mission">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+				<app-contact-input [tabIndex]="6"></app-contact-input>
+			</div>
+		</section>
+	
+		<!--------------------------------------------------------------- SERVICES -------------------------------------------------------------->
+		<section id="services" class="services">
+			<p class="services__title margin-offset p--large">We offer high demand services</p>
+	
+			<div class="services__cards">
+				<ng-container *ngFor="let service of services">
+					<app-card-service [service]="service"></app-card-service>
+				</ng-container>
+			</div>
+		</section>
+	
+		<!--------------------------------------------------------------- DESIGNS --------------------------------------------------------------->
+		<section id="designs" class="designs">
+			<p class="designs__title margin-offset p--large">Good design means good business</p>
+	
+			<div class="designs__cards">
+				<ng-container *ngFor="let design of designs">
+					<app-card-design [design]="design"></app-card-design>
+				</ng-container>
+			</div>
+	
+			<a class="designs__more p--normal p--blue" href="" arrow="→" tabIndex="14">see more</a>
+		</section>
+	
+		<!--------------------------------------------------------------- TEAM ------------------------------------------------------------------>
+		<section id="team" class="team">
+			<p class="p--normal p--red">Meet the team</p>
+			<p class="team__title p--xlarge">We are chilled and a laidback team</p>
+			<p class="team__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+			<div class="team__preview">
+				<img class="team__photo team__photo--first" src="assets/person3.png" alt="">
+				<div class="flex-group flex-group--column">
+					<img class="team__photo team__photo--second" src="assets/person1.png" alt="">
+					<img class="team__photo team__photo--third" src="assets/person2.png" alt="">
 				</div>
 			</div>
-		</div>
-	</section>
-
-	<!--------------------------------------------------------------- SERVICES -------------------------------------------------------------->
-	<section class="services">
-		<p class="services__title p p--large">We offer high demand services</p>
-
-		<div class="services__cards">
-			<ng-container *ngFor="let service of services">
-				<app-card-service [service]="service"></app-card-service>
-			</ng-container>
-		</div>
-	</section>
-
-	<!--------------------------------------------------------------- DESIGNS --------------------------------------------------------------->
-	<section class="designs">
-		<p class="designs__title p p--large">Good design means good business</p>
-
-		<div class="designs__cards">
-			<ng-container *ngFor="let design of designs">
-				<app-card-design [design]="design"></app-card-design>
-			</ng-container>
-		</div>
-
-		<a class="designs__more p p--normal p--blue " href="" arrow="→" tabIndex="7">see more</a>
-	</section>
-
-	<!--------------------------------------------------------------- TEAM ------------------------------------------------------------------>
-	<section class="team">
-		<p class="p p--normal p--red">Meet the team</p>
-		<p class="team__title p p--xlarge">We are chilled and a laidback team</p>
-		<p class="team__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-		<div class="team__preview">
-			<img class="team__photo" src="assets/person3.png" alt="">
-			<div class="flex-group flex-group--column">
-				<img class="team__photo" src="assets/person1.png" alt="">
-				<img class="team__photo" src="assets/person2.png" alt="">
+		</section>
+	
+		<!--------------------------------------------------------------- CLIENT ------------------------------------------------------------------>
+		<section id="clients" class="clients">
+			<p class="clients__quote p--large">“Fast and outstanding results. Edie understands their customer's needs. They have a young and talented team.”</p>
+			<div class="clients__profile flex-group">
+				<img class="clients__photo" src="assets/person4.png" alt="">
+				<span class="clients__quote-author p--large" data-client="The Decorate Gatsby">Carlos Tran</span>
 			</div>
+		</section>
+	</main>
+	
+	<footer class="footer">
+		<nav id="contact" class="footer__nav">
+			<ul>
+				<li class="footer__link"><a href="#home"	 [tabIndex]="15" title="Home">Home</a></li>
+				<li class="footer__link"><a href="#services" [tabIndex]="16" title="Services">Services</a></li>
+				<li class="footer__link"><a href="#designs"  [tabIndex]="17" title="Our Works">Our Works</a></li>
+				<li class="footer__link"><a href="#clients"  [tabIndex]="18" title="Clients">Clients</a></li>
+				<li class="footer__link"><a href="#contact"  [tabIndex]="19" title="Contact">Contact</a></li>
+			</ul>
+		</nav>
+	
+		<p class="footer__title">Edie</p>
+	
+		<div class="footer__social flex-group">
+			<img src="assets/instagram.svg" alt="Instagram icon">
+			<img src="assets/linkedin.svg" alt="Linkedin icon">
+			<img src="assets/twitter.svg" alt="Twitter icon">
 		</div>
-	</section>
-</main>
+	
+		<app-contact-input [tabIndex]="20"></app-contact-input>
+	
+		<p class="footer__creator">created by <a href="https://github.com/ManuelMadeira98" target="_blank">Manuel</a> - devChallenges.io</p>
+	</footer>
 
-<footer>
-		
-</footer>

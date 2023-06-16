@@ -1,0 +1,7 @@
+<div class="contact">
+	<label class="contact__label" for="{{'email-' + tabIndex}}">Want us to contact you?</label>
+	<div class="contact__field">
+		<input required id="{{'email-' + tabIndex}}" type="email" placeholder="Email" autocomplete="off" [tabindex]="tabIndex">
+	</div>
+	<button class="contact__join" [tabindex]="tabIndex + 1">Join</button>
+</div>

@@ -1,0 +1,88 @@
+.nav {
+	&__icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__close {
+		display: block;
+		transition: all 0.3s ease-in-out;
+		transform: scale(1.5);
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__icon, &__close {
+		z-index: 300;
+	}
+
+	&__hamburguer {
+		position: absolute;
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+
+		&--line {
+			z-index: 5;
+			width: 25px;
+			height: 3px;
+			background-color: var(--clr-neutral-700);
+			margin: 5px 0;
+		}
+	}
+
+	&__mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: grid;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(255,255,255, 0.8);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 200;
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		padding: 0;
+
+		li  {
+			list-style: none;
+
+			a {
+				text-decoration: none;
+				color: var(--clr-neutral-900);
+				font-size: 1.125rem;
+				font-weight: var(--font-medium);
+				padding-bottom: .5rem;
+			}
+		}
+	}
+}
+
+/* Opacity transition states */
+.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.inactive {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@media (width >= 992px) {
+	.nav {
+		&__menu {
+			flex-direction: row;
+			gap: 5.375rem;
+		}
+	}
+}

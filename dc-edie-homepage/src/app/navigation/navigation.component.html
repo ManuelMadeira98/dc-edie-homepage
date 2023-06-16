@@ -1,0 +1,30 @@
+<nav class="nav">
+	<div class="nav__icon" *ngIf="true; else desktopMenu" (click)="menuIsOpen = !menuIsOpen">
+		<div class="nav__hamburguer" [class.inactive]="menuIsOpen">
+			<div class="nav__hamburguer--line"></div>
+			<div class="nav__hamburguer--line"></div>
+			<div class="nav__hamburguer--line"></div>
+		</div>
+
+		<span class="nav__close material-symbols-outlined" [class.active]="menuIsOpen">close</span>
+	</div>
+
+	<div class="nav__mobile" [class.active]="menuIsOpen" [noBackgroundScroll]="menuIsOpen">
+		<div *ngTemplateOutlet="menu"></div> 
+	</div>
+
+	<ng-template #desktopMenu>
+		<div *ngTemplateOutlet="menu"></div>
+	</ng-template>
+</nav>
+
+<!-- Menu items template -->
+<ng-template #menu>
+	<ul class="nav__menu" resetTabindex>
+		<li><a href="#home" 	[tabIndex]="1" title="Home" (click)="onMenuClick()">Home</a></li>
+		<li><a href="#services" [tabIndex]="2" title="Collection" (click)="onMenuClick()">Services</a></li>
+		<li><a href="#designs"  [tabIndex]="3" title="Designs" (click)="onMenuClick()">Our Works</a></li>
+		<li><a href="#clients"  [tabIndex]="4" title="Clients" (click)="onMenuClick()">Clients</a></li>
+		<li><a href="#contact"  [tabIndex]="5" title="Contact" (click)="onMenuClick()">Contact</a></li>
+	</ul>
+</ng-template>
