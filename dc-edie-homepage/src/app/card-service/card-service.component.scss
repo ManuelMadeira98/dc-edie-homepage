@@ -24,7 +24,6 @@
 	padding: 3.0625rem 7.5%;
 	border: none;
 	border-radius: 1.5rem;
-	transition: all 0.2s ease-in-out;
 
 	&:hover {
 		cursor: pointer;
@@ -72,6 +71,5 @@
 		padding: .5625rem .75rem;
 		background-color: var(--clr-neutral-300);
 		color: var(--clr-neutral-500);
-		transition: all 0.2s ease-in-out;
 	}
 }
