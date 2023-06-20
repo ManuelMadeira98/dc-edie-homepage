@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppComponent } from './app.component';
 import { CardDesignComponent } from './card-design/card-design.component';
@@ -11,7 +12,7 @@ import { NoBackgroundScrollDirective } from './no-background-scroll.directive';
 
 @NgModule({
 	declarations: [AppComponent, CardDesignComponent, CardServiceComponent, ContactInputComponent, NavigationComponent, ResetTabindexDirective, NoBackgroundScrollDirective],
-	imports: [BrowserModule],
+	imports: [BrowserModule, LayoutModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })

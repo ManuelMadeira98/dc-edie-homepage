@@ -4,10 +4,11 @@
 }
 
 .card {
+	max-width: 544px;
+
 	&__image {
 		width: 100%;
-		max-width: 545px;
-		height: auto;
+		max-height: 545px;
 		border-radius: .75rem;
 		margin-bottom: .75rem;
 	}
@@ -22,5 +23,34 @@
 		font-size: 1.125rem;
 		font-weight: var(--font-medium);
 		color: var(--clr-neutral-700);
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:is(:hover) &__image {
+		transform: scale(1.02);
+		opacity: 0.85;
+	}
+}
+
+@media (width >= 768px) {
+	:host {
+		&:nth-child(1), &:nth-child(2) {
+			transform: translateY(33%);
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.card {
+		&__theme {
+			font-size: .875rem;
+		}
+
+		&__project {
+			font-size: 1.5rem;
+		}
 	}
 }

@@ -55,13 +55,20 @@
 
 		li  {
 			list-style: none;
+		}
 
-			a {
-				text-decoration: none;
-				color: var(--clr-neutral-900);
-				font-size: 1.125rem;
-				font-weight: var(--font-medium);
-				padding-bottom: .5rem;
+		a {
+			text-decoration: none;
+			color: var(--clr-neutral-900);
+			font-size: 1.125rem;
+			font-weight: var(--font-medium);
+
+			&:hover {
+				color: var(--clr-neutral-500);
+			}
+
+			@media (width >= 1366px) {
+				font-size: 1.5rem;
 			}
 		}
 	}

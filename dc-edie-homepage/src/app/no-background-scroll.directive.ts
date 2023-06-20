@@ -1,4 +1,4 @@
-import { Directive, Renderer2, OnInit, Input, OnChanges } from '@angular/core';
+import { Directive, Renderer2, Input, OnChanges } from '@angular/core';
 
 @Directive({
 	selector: '[noBackgroundScroll]',
